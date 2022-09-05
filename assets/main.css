@@ -1,0 +1,152 @@
+@font-face {
+  font-family: 'Satisfy';
+  src: url(./Satisfy\ font/Satisfy-Regular.ttf);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Satisfy';
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(./images/background.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 650px;
+  align-items: center;
+  justify-content: space-between;
+  border: 3px solid black;
+  padding: 20px;
+  background-color: #ffffff;
+  opacity: 0.7;
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.date {
+  color: #C9B037;
+  align-self: flex-start;
+  font-size: 2.5em;
+  width: 150px;
+  font-weight: 700;
+}
+
+.newItem {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 40px;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.addText {
+  width: 100%;
+  padding-left: 5px;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+.addText:focus {
+  outline: none;
+}
+
+.addItem {
+  display: flex;
+  width: 60px;
+  font-size: 1.5em;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid 1px black;
+}
+
+.pending, .completed {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.pendingTask, .completedTask {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 10px;
+  width: 100%;
+}
+
+.checkbox {
+  width: 20px;
+  border: none;
+  outline: none;
+}
+
+.deleteTask {
+  width: 25px;
+  cursor: pointer;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  visibility: hidden;
+  align-self: center;
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
+}
+
+.completedItem{
+  display: flex;
+  flex-direction: row;
+  border-radius: 5px;
+  padding: 10px;
+  gap: 10px;
+  text-decoration: line-through;
+}
+
+.showHide, .delete {
+  padding: 3px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  border: solid 1px black;
+  font-weight: 700;
+}
+
+.invisible{
+  display: none;
+}
+
+.fadeIn {
+  animation: fade 1.5s forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
